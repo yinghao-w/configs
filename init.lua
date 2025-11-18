@@ -16,11 +16,8 @@ vim.opt.guicursor = "i-ci-ve:block"
 
 vim.g.mapleader = " "
 vim.keymap.set({"n", "v"}, ";", ":")
-vim.keymap.set("n", "<leader>=", ":bnext<CR>")
-vim.keymap.set("n", "<leader>-", ":bprev<CR>")
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-N>")
--- vim.keymap.set("t", "<C-W>", "<C-\\><C-N><C-W>")
 
 --TREESITTER--
 
