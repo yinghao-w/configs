@@ -3,7 +3,7 @@ if status is-interactive
 	fish_add_path ~/.local/bin
 
 	set -g -x EDITOR nvim
-	set -g -x MANPAGER "sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
+	set -g -x MANPAGER "fish -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -l man'"
 
 	abbr --add av source venv/bin/activate.fish
 	abbr --add ncspot flatpak run io.github.hrkfdn.ncspot
