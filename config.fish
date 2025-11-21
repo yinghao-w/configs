@@ -11,10 +11,7 @@ if status is-interactive
 	abbr --add ddg lynx duckduckgo.com
 	abbr --add n nnn
 
-	function u-gcc
-		set -g -x CC gcc
-	end
-	function u-clang
-		set -g -x CC clang
+	function c -a compiler
+		set -g -x CC $compiler
 	end
 end
