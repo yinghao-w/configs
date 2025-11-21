@@ -14,4 +14,7 @@ if status is-interactive
 	function c -a compiler
 		set -g -x CC $compiler
 	end
+
+	set -g -x FZF_CTRL_T_OPTS "--preview 'bat --color=always --style=plain --line-range :500 {}'"
+	source (status dirname)/fzf_key_bindings.fish
 end
