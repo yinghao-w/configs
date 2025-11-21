@@ -73,6 +73,7 @@ vim.pack.add({
 	  "https://github.com/nvim-treesitter/nvim-treesitter",
 	  "https://github.com/nvim-mini/mini.nvim",
 	  "https://github.com/rafamadriz/friendly-snippets",
+	  "https://github.com/lukas-reineke/indent-blankline.nvim",
     })
 
 require("tokyonight").setup()
@@ -103,6 +104,8 @@ require("gruvbox").setup({
 
 require("lualine").setup()
 
+require("ibl").setup()
+
 require("mini.tabline").setup()
 require("mini.animate").setup()
 require("mini.starter").setup()
@@ -112,6 +115,9 @@ require("mini.pick").setup()
 require("mini.diff").setup()
 require("mini.pairs").setup()
 require("mini.completion").setup()
+require("mini.surround").setup()
+require("mini.indentscope").setup()
+require("mini.git").setup()
 require("mini.files").setup({
 	-- Customization of explorer windows
 	windows = {
@@ -137,9 +143,10 @@ MiniSnippets.start_lsp_server({ match = false })
 --PACKAGE KEYBINDS--
 
 vim.keymap.set("n", "<leader>f", MiniFiles.open)
-vim.keymap.set("n", "<leader>g", function() MiniFiles.open(vim.api.nvim_buf_get_name(0)) end)
 vim.keymap.set("n", "<leader>m", MiniMap.toggle)
 vim.keymap.set("n", "<leader>d", function() pcall(MiniDiff.toggle_overlay) end)
 vim.keymap.set("n", "<leader>s", MiniStarter.open)
+vim.keymap.set("n", "<leader>p", MiniPick.builtin.files)
+vim.keymap.set("n", "<leader>g", MiniPick.builtin.grep_live)
 
 pcall(require, "extra")
