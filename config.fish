@@ -10,6 +10,10 @@ if status is-interactive
 	abbr --add todo todo.sh
 	abbr --add ddg lynx duckduckgo.com
 	abbr --add n nnn
+	abbr --add gs git status
+	abbr --add gl git log
+	abbr --add glg git log --oneline --graph --decorate --all
+	abbr --add gd git diff
 
 	function c -a compiler
 		set -g -x CC $compiler
