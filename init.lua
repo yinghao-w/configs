@@ -66,44 +66,15 @@ vim.diagnostic.config({ virtual_text= true })
 
 vim.pack.add({
 	  "https://github.com/nvim-lualine/lualine.nvim",
-	  "https://github.com/catppuccin/nvim",
 	  "https://github.com/rose-pine/neovim",
-	  "https://github.com/ellisonleao/gruvbox.nvim",
-	  "https://github.com/folke/tokyonight.nvim",
 	  "https://github.com/nvim-treesitter/nvim-treesitter",
 	  "https://github.com/nvim-mini/mini.nvim",
 	  "https://github.com/rafamadriz/friendly-snippets",
 	  "https://github.com/lukas-reineke/indent-blankline.nvim",
     })
 
-require("tokyonight").setup()
-require("gruvbox").setup({ transparent_mode = true })
 require("rose-pine").setup({ styles = { transparency = true }})
-require("catppuccin").setup({ transparent_background = true })
-require("catppuccin").setup({ transparent_background = true, styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-            comments = { "italic" }, -- Change the style of comments
-            conditionals = { "italic" },
-            loops = { "italic" },
-            functions = { "italic" },
-            keywords = { "italic" },
-            strings = { "italic" },
-            variables = { "italic" },
-            numbers = { "italic" },
-            booleans = { "italic" },
-            properties = { "italic" },
-            types = { "italic" },
-            operators = { "italic" },
-            -- miscs = { "italic" }, -- Uncomment to turn off hard-coded styles
-        }})
-require("gruvbox").setup({
-	transparent_mode = true,
-	italic = {
-		strings = false,
-	},
-  })
-
 require("lualine").setup()
-
 require("ibl").setup()
 
 require("mini.tabline").setup()
