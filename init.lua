@@ -74,6 +74,8 @@ vim.pack.add({
     })
 
 require("rose-pine").setup({ styles = { transparency = true }})
+vim.cmd.colorscheme("rose-pine")
+
 require("lualine").setup()
 require("ibl").setup()
 
