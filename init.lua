@@ -18,6 +18,16 @@ vim.g.mapleader = " "
 vim.keymap.set({"n", "v"}, ";", ":")
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-N>")
+vim.keymap.set("t", "<C-W>", "<C-\\><C-N><C-W>")
+
+--TERMINAL--
+
+vim.api.nvim_create_autocmd( "BufEnter" , {
+	pattern = "term://*",
+	callback = function()
+		pcall(vim.cmd, "startinsert")
+	end
+})
 
 --TREESITTER--
 
