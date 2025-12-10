@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd( "BufEnter" , {
 --TREESITTER--
 
 vim.api.nvim_create_autocmd( 'BufEnter', {
-	pattern = {"*.lua", "*.py", "*.c", "*.h", "*.cpp", "*.hpp", "*.md", "README", "*.vert", "*.frag", "Makefile", "Makefile"},
+	pattern = {"*.lua", "*.py", "*.c", "*.h", "*.cpp", "*.hpp", "*.md", "README", "*.vert", "*.frag", "Makefile", "Makefile", "*.sh"},
     callback = function()
         pcall(vim.treesitter.start)
     end
