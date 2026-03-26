@@ -9,7 +9,7 @@ if status is-interactive
 	abbr --add ncspot flatpak run io.github.hrkfdn.ncspot
 	abbr --add todo todo.sh
 	abbr --add ddg lynx duckduckgo.com
-	abbr --add n nnn
+	abbr --add fm ranger
 	abbr --add gs git status
 	abbr --add gl git log
 	abbr --add glg git log --oneline --graph --decorate --all
