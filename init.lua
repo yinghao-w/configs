@@ -89,10 +89,15 @@ vim.pack.add({
 require("rose-pine").setup({ styles = { transparency = true }})
 vim.cmd.colorscheme("rose-pine")
 
-require("lualine").setup()
+require('lualine').setup({
+  tabline = {
+    lualine_a = {'buffers'},
+    lualine_z = {'tabs'}
+  }
+})
+
 require("ibl").setup()
 
-require("mini.tabline").setup()
 require("mini.animate").setup()
 require("mini.starter").setup()
 require("mini.map").setup()
