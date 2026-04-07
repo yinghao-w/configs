@@ -11,6 +11,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
 vim.opt.guicursor = "i-ci-ve:block"
+vim.opt.autocomplete = true
 
 --BASE KEYBINDS--
 
@@ -74,6 +75,8 @@ vim.diagnostic.config({ virtual_text= true })
 --PACKAGES--
 ------------
 
+vim.cmd.packadd("nvim.undotree")
+
 vim.pack.add({
 	  "https://github.com/nvim-lualine/lualine.nvim",
 	  "https://github.com/rose-pine/neovim",
@@ -97,7 +100,6 @@ require("mini.icons").setup()
 require("mini.pick").setup()
 require("mini.diff").setup()
 require("mini.pairs").setup()
-require("mini.completion").setup()
 require("mini.surround").setup()
 require("mini.indentscope").setup()
 require("mini.git").setup()
