@@ -84,6 +84,7 @@ vim.pack.add({
 	  "https://github.com/nvim-mini/mini.nvim",
 	  "https://github.com/rafamadriz/friendly-snippets",
 	  "https://github.com/lukas-reineke/indent-blankline.nvim",
+	  "https://github.com/dstein64/nvim-scrollview",
     })
 
 require("rose-pine").setup({ styles = { transparency = true }})
